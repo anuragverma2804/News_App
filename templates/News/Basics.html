@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<title> {% block title %} {% endblock %} </title>
+    {% load static %}
+      	<link rel = "icon" type = "image/png" href = "{% static 'logo.png' %}">
+    <style>{% block css %} {% endblock %}</style>
+
+
+  <style>
+    body{
+    min-height:654px;
+    max-height:100000px;
+  background-image: linear-gradient(#00ace6,  #e6f9ff);
+   background-repeat: no-repeat;
+
+}
+nav,footer{
+box-shadow: 0 4px 8px 0 rgba(0, 0,
+0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  </style>
+  <body>
+  <header>
+      {% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+  <a class="navbar-brand" href="/">
+    <img src="{% static 'logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="...">
+    Express News
+  </a>
+<div class="collapse navbar-collapse flex-grow-1 text-right" id="myNavbar7">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+  <li class="nav-item active">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/About_us">About Us <span class="sr-only">(current)</span></a>
+      </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="/subscribe/Contact_us">Contact Us<span class="sr-only">(current)</span></a>
+      </li>
+  </ul>
+</div>
+
+
+</nav>
+
+  </header>
+
+
+    </body>
+<body>{% block body %}{% endblock %}</body>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+     {% block js %} {% endblock %}
+</html>

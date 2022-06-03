@@ -1,0 +1,19 @@
+{% extends "News/Basics.html" %}
+{% block title %} Today's Headlines {% endblock %}
+
+{% block body %}
+{% for k1, v1 in news.items %}
+
+<div class="card mx-2 my-2">
+  <div class="card-header ">
+    <div class="row d-flex">
+    {{k1}}:- {{v1.title}} <div class="ml-auto"><h6>Published At:</h6><h6>{{v1.publishedAt}}</h6></div>
+      </div>
+  </div>
+  <div class="card-body">
+    <p class="card-text">{{v1.desc}}</p>
+    <a href="{{v1.url}}" class="btn btn-primary">Full Article</a>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}

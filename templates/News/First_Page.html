@@ -1,0 +1,29 @@
+{% extends "News/Basics.html" %}
+{% block title %} Super News Channel {% endblock %}
+{% block style %}
+#para{
+text-align:-moz-center;
+}
+body{
+height:700px;
+}
+{% endblock %}
+{% block body %}
+<div class="mx-5"  style="text-align:center;  margin-top:120px; border: 5px solid 00ACE6;box-shadow: 0 4px 8px 0 rgba(0, 0,
+0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); ">
+    <h1 style="margin-bottom: 20px;"> Welcome To Super News Channel </h1>
+    <div id="para" style="text-align: -moz-center;">
+        <p class="lead col-4"> Subscribe To Get Daily Headlines From Various Fields on your Phone Number or Email</p>
+    </div>
+    <div><a href="/subscribe">
+        <button type="button" class="btn btn-primary my-3 ">Subscribe Now</button></a>
+    </div>
+    <div>
+        <h6>OR</h6>
+    </div>
+    <div>
+        <a href="/home">
+           <button type="button" class="btn btn-primary my-2">Read Now</button></a>
+    </div>
+</div>
+{% endblock %}

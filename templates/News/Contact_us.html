@@ -1,0 +1,39 @@
+{% extends "News/Basics.html" %}
+{% block title %} Contact Us {% endblock %}
+{% block style %}
+body{
+height:654px;
+}
+{% endblock %}
+{% block body %}
+<div class="mx-3 mt-5 col-6">
+    <form action="/subscribe/Contact_us" method="post">
+        {% csrf_token %}
+  <div class="form-group">
+    <label for="name">Full Name</label>
+    <input type="text" class="form-control" id="name" placeholder="Narendra Modi" name="name">
+      <label for="email">Email address</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
+      <label for="phone">Phone Number</label>
+    <input type="tel" class="form-control" id="phone" placeholder="1234567890" name="phone">
+  </div>
+
+  <div class="form-group">
+    <label for="desc">Description</label>
+    <textarea class="form-control" id="desc" rows="3" placeholder="Describe Your Query..." name="desc"></textarea>
+      <button type="submit" class="btn btn-primary mt-2"> Submit </button>
+  </div>
+</form>
+
+
+
+
+    <strong>OR</strong>
+    <h6> Send A mail to Anurag Verma at Email Address <strong>anuragverma228497@gmail.com</strong> </h6>
+
+
+
+
+</div>
+
+{% endblock %}

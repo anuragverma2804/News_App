@@ -1,0 +1,35 @@
+{% extends "News/Basics.html" %}
+{% block title %} Super News Channel {% endblock %}
+{% block css %}
+#login{
+width:300px;
+height:500px;
+background:white;
+box-shadow: 0 4px 8px 0 rgba(0, 0,
+0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+body{
+height:654px;
+}
+{% endblock %}
+{% block body %}
+{% load static %}
+<div class="container mt-4 text-centre " id="login">
+    <h4 class="border-bottom py-2">Sign In to Express News</h4>
+    <div class="text-centre" id="log">
+        <button type="button" class="btn btn-primary my-3 ml-3 " style="background:none; color: black; ">
+            <img class="mr-2" src="{% static 'cvlogo1.jpg'%}" style="width:30px;height:30px;" alt="">
+            Continue with Facebook
+        </button>
+    </div>
+</div>
+{% endblock %}
+{% block js%}
+<script>
+$(document).ready(function() {
+            $("button").click(function() {
+                        $("#log").html('<div><h4 class="mb-3 ml-4">Log in to Facebook</h4><input class="pl-2" type="text"style="width:267px;"placeholder="Email Address or phone number" name="fphone"><input class="my-3 pl-2" type="password" style="width:267px;"placeholder="Password" name="fpass"><a href=""><button class="mt-3" type="submit"style="background:#3b5998;border:none;width:267px;height:30px;color:white;font-weight:bold;">Log In</button></a></div>');
+    });
+});
+</script>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "News/Basics.html"%}
+{% block title %} Subscribe Now..! {% endblock%}
+{% block style %}
+
+input[type="checkbox"]:checked{
+box-shadow:0 0 0 3px green;
+}
+body{
+height:654px;
+}
+
+{% endblock %}
+{% block body %}
+<form class="mx-3 my-3 col-6" action="/subscribe" method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <div class="col-md-6">
+        <label>Name</label>
+        {{ form.name}}
+            </div>
+        <div class="form-group">
+            <div class="col-md-6">
+        <label>Phone Number</label>
+        {{ form.phone}}
+                </div>
+            </div>
+        <div class="form-group">
+                        <div class="col-md-6">
+
+        <label>Email Address</label>
+            {{ form.email}}
+            </div>
+                        </div>
+
+
+    </div>
+    <div class="my-2">
+    	<h6> Choose Topics As Per Your Intrests</h6>
+        <div class="form-check ">
+            <div class="head">
+                {{ form.headlines}}
+                <label for="id_headlines" >
+                    Headlines
+                </label>
+            </div>
+            <div>
+                {{ form.bussiness}}
+                <label for="id_bussiness" >
+                    Bussiness
+                </label>
+            </div>
+            <div>
+                {{ form.entertainment}}
+                <label for="id_entertainment" >
+                    Entertainment
+                </label>
+            </div>
+            <div>
+                {{ form.health}}
+                <label for="id_health" >
+                    Health
+                </label>
+            </div>
+            <div>
+                {{ form.science}}
+                <label for="id_science" >
+                    Science
+                </label>
+            </div>
+            <div>
+                {{ form.technology}}
+                <label for="id_technology" >
+                    Technology
+                </label>
+            </div>
+            <div>
+                {{ form.sports}}
+                <label for="id_sports" >
+                    Sports
+                </label>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Subscribe</button>
+</form>
+{% endblock %}

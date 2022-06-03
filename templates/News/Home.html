@@ -1,0 +1,68 @@
+{% extends "News/Basics.html" %}
+{% block title %} Daily News For You {% endblock %}
+{% block css %}
+{% endblock %}
+
+{% block body %}
+{% load static %}
+<div class="container mt-5">
+    <div class="row">
+<div class="card mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'todayshead.png' %}" alt="Card image cap" >
+  <div class="card-body">
+    <h5 class="card-title">Todays Headlines</h5>
+    <p class="card-text">Click To get top headlines from every Fields</p>
+    <a href="/todays_headlines" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+        <div class="card  mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'bussiness.jpg' %}" alt="Card image cap" style="width:286px;height:160px;">
+  <div class="card-body">
+    <h5 class="card-title">Bussiness</h5>
+    <p class="card-text">Click To get top Bussiness Headlines </p>
+    <a href="/bussiness" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+        <div class="card  mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'entainment.png' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Enterainment</h5>
+    <p class="card-text">Click To get top Entertainment Headlines </p>
+    <a href="/entertainment" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+        <div class="card  mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'health.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Health</h5>
+    <p class="card-text">Click To get top Health Headlines </p>
+    <a href="/health" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+        <div class="card  mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'science.jpg' %}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Science</h5>
+    <p class="card-text">Click To get top Science Headlines</p>
+    <a href="/science" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+        <div class="card  mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'tech.jpg' %}" alt="Card image cap" style="height:160px;">
+  <div class="card-body">
+    <h5 class="card-title">Technology</h5>
+    <p class="card-text">Click To get top Technological Headlines </p>
+    <a href="/technology" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+        <div class="card  mx-4 my-4" style="width: 18rem;">
+  <img class="card-img-top" src="{% static 'biew-sports.jpg' %}" alt="Card image cap" style="160px;">
+  <div class="card-body">
+    <h5 class="card-title">Sports</h5>
+    <p class="card-text">Click To get top Sports Headlines </p>
+    <a href="/sport" class="btn btn-primary">Get Headlines</a>
+  </div>
+</div>
+    </div>
+    </div>
+{% endblock %}
